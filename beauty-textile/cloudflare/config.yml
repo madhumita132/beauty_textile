@@ -1,0 +1,26 @@
+# ================================================================
+# Cloudflare Tunnel config for Beauty Textile
+#
+# QUICK START (no account needed — temporary URL):
+#   cloudflared tunnel --url http://localhost:8080
+#
+# PERSISTENT URL SETUP (free Cloudflare account):
+#   1. Sign up at https://dash.cloudflare.com
+#   2. Run: cloudflared tunnel login
+#   3. Run: cloudflared tunnel create beauty-textile
+#   4. Copy the tunnel ID into this file (tunnel: YOUR-TUNNEL-ID)
+#   5. Run: cloudflared tunnel route dns beauty-textile shop.yourdomain.com
+#   6. Run: cloudflared tunnel run beauty-textile
+# ================================================================
+
+tunnel: YOUR-TUNNEL-ID-HERE
+credentials-file: C:\Users\YOUR_USERNAME\.cloudflared\YOUR-TUNNEL-ID.json
+
+ingress:
+  # Route all traffic to Spring Boot
+  - service: http://localhost:8080
+
+# Access policy (optional — remove to allow everyone)
+# access:
+#   - hostname: "*"
+#     service: http://localhost:8080

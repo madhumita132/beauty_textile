@@ -1,0 +1,32 @@
+# Beauty Textile — root gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.iml
+.vscode/settings.json
+.vscode/mcp.json
+
+# Uploads & backups (not committed)
+uploads/
+backups/
+logs/
+
+# Secrets
+*.env
+.env.*
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/cache/
+
+# Backend
+backend/target/
+backend/*.log
+
+# Maven wrapper jar (downloaded at runtime)
+backend/.mvn/wrapper/maven-wrapper.jar
